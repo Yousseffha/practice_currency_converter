@@ -1,0 +1,124 @@
+/* start variables */
+:root {
+  --MainColor: #408cf4;
+  --Gray: #bebdbd;
+  --MainTransition: 0.3s;
+}
+/* end variables */
+/* start global rules */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ddd;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  width: 30%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 20px;
+  border-radius: 7px;
+  border-top: 4px solid var(--MainColor);
+  box-shadow: 1px 1px 5px rgb(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+/* end global rules */
+/* start exchange rate */
+.exachage-rate {
+  height: 40%;
+}
+.exachage-rate span {
+  color: var(--Gray);
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+.exachage-rate #exchange-rate {
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
+}
+/* end exchange rate */
+/* start form */
+form {
+  width: 100%;
+  height: 60%;
+  position: relative;
+}
+.amount {
+  position: relative;
+}
+.amount label {
+  display: block;
+  text-transform: capitalize;
+  font-size: 13px;
+  color: var(--Gray);
+}
+.amount #error-message {
+  position: absolute;
+  right: 0;
+  font-size: 13px;
+  color: red;
+  opacity: 0;
+  transition: var(--MainTransition);
+}
+.amount input {
+  width: 100%;
+  height: 30px;
+  outline: none;
+  border: 1px solid var(--MainColor);
+  border-radius: 3px;
+  margin: 5px 0 15px 0;
+  transition: var(--MainTransition);
+}
+.currencies {
+  display: flex;
+  justify-content: space-around;
+}
+.currencies select {
+  border: 1px solid var(--MainColor);
+  outline: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 2px;
+}
+.currencies button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+#convert {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: var(--MainColor);
+  color: #fff;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: var(--MainTransition);
+}
+#convert:hover {
+  background-color: #6aa5f7;
+}
+/* end form */
+.currency-name {
+  color: var(--MainColor) !important;
+}
+@media (max-width: 815px) {
+  .container {
+    width: 50%;
+  }
+}
